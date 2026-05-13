@@ -1,36 +1,40 @@
-# [Project name]
+# Leena Tiwari — Portfolio
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+A personal portfolio website for Leena Tiwari, a Software Development Engineer. Features a dark futuristic design with glassmorphism, animated hero, typed text effect, skills grid, projects showcase, resume download, and a contact form.
 
 ## Run & Operate
 
-- `pnpm --filter @workspace/api-server run dev` — run the API server (port 5000)
+- `pnpm --filter @workspace/portfolio run dev` — run the portfolio (via workflow)
+- `pnpm --filter @workspace/api-server run dev` — run the API server (port varies)
 - `pnpm run typecheck` — full typecheck across all packages
 - `pnpm run build` — typecheck + build all packages
-- `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from the OpenAPI spec
-- `pnpm --filter @workspace/db run push` — push DB schema changes (dev only)
-- Required env: `DATABASE_URL` — Postgres connection string
 
 ## Stack
 
 - pnpm workspaces, Node.js 24, TypeScript 5.9
-- API: Express 5
-- DB: PostgreSQL + Drizzle ORM
-- Validation: Zod (`zod/v4`), `drizzle-zod`
-- API codegen: Orval (from OpenAPI spec)
-- Build: esbuild (CJS bundle)
+- Frontend: Vite + React + Tailwind CSS v4 + Framer Motion
+- UI: Radix UI + shadcn components
+- Fonts: Space Grotesk (display), Inter (body), JetBrains Mono (code)
+- Color theme: Dark futuristic with neon cyan/blue/purple oklch palette
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `artifacts/portfolio/src/components/portfolio/` — main portfolio sections (Hero, About, Skills, Projects, Resume, Contact, Footer, Navbar, Section)
+- `artifacts/portfolio/src/assets/leena.jpg` — profile photo
+- `artifacts/portfolio/src/index.css` — design system (colors, theme, utilities)
+- `artifacts/portfolio/index.html` — Google Fonts links
+- `artifacts/api-server/` — backend Express server (unused by portfolio currently)
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+- Single-page portfolio: all sections live on one page with anchor-based navigation
+- TanStack Router removed in favor of plain React (single SPA page)
+- Tailwind v4 with oklch color system; dark futuristic theme baked into `:root`
+- Framer Motion for scroll-triggered and load animations; CSS for blobs and cursor blink
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+A portfolio site for Leena Tiwari with sections: Hero (typing animation + photo), About (stats), Skills (tech stack cards), Projects (StartupIQ, DevConnect, Portfolio), Resume (download link), and Contact (form + social links).
 
 ## User preferences
 
@@ -38,7 +42,9 @@ _Populate as you build — explicit user instructions worth remembering across s
 
 ## Gotchas
 
-_Populate as you build — sharp edges, "always run X before Y" rules._
+- Do not run `pnpm dev` at the workspace root — use workflow or `pnpm --filter @workspace/portfolio run dev`
+- The `source(none)` in index.css is intentional — Tailwind v4 scans `../src` explicitly
+- Google Fonts links are in `artifacts/portfolio/index.html`, not the CSS
 
 ## Pointers
 
