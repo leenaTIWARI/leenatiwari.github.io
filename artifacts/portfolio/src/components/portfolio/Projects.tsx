@@ -8,18 +8,24 @@ const projects = [
     desc: "AI startup idea validation platform generating SWOT analysis, market research, monetization plans and MVP roadmap.",
     tech: ["React", "Flask", "SQLite", "JWT", "AI APIs"],
     gradient: "from-[var(--neon-blue)] to-[var(--neon-purple)]",
+    github: "https://github.com/leenaTIWARI/StartupIQ",
+    live: "https://startup-iq.vercel.app/",
   },
   {
     title: "DevConnect",
     desc: "Developer networking platform with profiles, follow system and project showcase to connect builders worldwide.",
     tech: ["React", "Node.js", "Express", "MySQL"],
     gradient: "from-[var(--neon-cyan)] to-[var(--neon-blue)]",
+    github: "#",
+    live: "#",
   },
   {
     title: "Portfolio Website",
     desc: "Modern animated personal portfolio with glassmorphism, motion design and recruiter-friendly UX.",
     tech: ["React", "Tailwind", "Framer Motion"],
     gradient: "from-[var(--neon-purple)] to-[var(--neon-cyan)]",
+    github: "#",
+    live: "#",
   },
 ];
 
@@ -53,10 +59,10 @@ export function Projects() {
                 ))}
               </div>
               <div className="flex gap-3">
-                <a href="#" className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary transition-colors">
+                <a href={p.github} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary transition-colors">
                   <Github size={14} /> Code
                 </a>
-                <a href="#" className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary transition-colors">
+                <a href={p.live} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary transition-colors">
                   <ExternalLink size={14} /> Live
                 </a>
               </div>
