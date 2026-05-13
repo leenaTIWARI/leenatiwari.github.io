@@ -95,10 +95,10 @@ export function Hero() {
 
           <div className="flex items-center gap-4">
             {[
-              { Icon: Github, href: "https://github.com", label: "GitHub" },
+              { Icon: Github, href: "https://github.com/leenaTIWARI", label: "GitHub" },
               { Icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
               { Icon: Code2, href: "https://leetcode.com", label: "LeetCode" },
-              { Icon: Mail, href: "mailto:leena@example.com", label: "Email" },
+              { Icon: Mail, href: "mailto:123lina250805@gmail.com", label: "Email" },
             ].map(({ Icon, href, label }) => (
               <a
                 key={label}

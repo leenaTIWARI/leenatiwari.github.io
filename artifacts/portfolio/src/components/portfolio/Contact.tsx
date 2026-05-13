@@ -19,8 +19,8 @@ export function Contact() {
       <div className="grid lg:grid-cols-5 gap-8 max-w-5xl mx-auto">
         <div className="lg:col-span-2 space-y-4">
           {[
-            { Icon: Mail, label: "Email", value: "leena.tiwari@example.com", href: "mailto:leena.tiwari@example.com" },
-            { Icon: Github, label: "GitHub", value: "github.com/leenatiwari", href: "https://github.com" },
+            { Icon: Mail, label: "Email", value: "123lina250805@gmail.com", href: "mailto:123lina250805@gmail.com" },
+            { Icon: Github, label: "GitHub", value: "github.com/leenaTIWARI", href: "https://github.com/leenaTIWARI" },
             { Icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/leenatiwari", href: "https://linkedin.com" },
           ].map(({ Icon, label, value, href }) => (
             <a
